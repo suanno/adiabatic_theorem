@@ -13,7 +13,7 @@ $$\Psi(t+\tau) = e^{-i(V*\frac{\tau}{2})}\mathcal{F^{-1}}[e^{-i(k^2*\frac{\tau}{
 where $\mathcal{F}$ is the Fourier transform, $k$ is the dual variable of $x$, $\tau$ is the discrete time step and $V(x)$ is the harmonic oscillator potential.
 The harmonic oscillator potential is $V(x)=\frac12\omega^2x^2$, where $\omega$ is the _instantaneous frequency_ ($\omega = \omega(t) $) that its changed linearly in time($\omega = \omega_0 + \alpha*t$).
 
-**Note that:** the method adopted for the system's state evolution commits an error of order $\tau^3$ in the single step $t\rightarrow t+\tau$ and so a global error, during the whole simulation, which is $\mathcal{O}(\tau^2)$. While it makes an error of order $\tau^2$ in the single step if the potential depends on time (and this is the case) and so the error is $\mathcal{O}(\tau^3)$ for the whole simulation.
+**Note that:** the method adopted for the system's state evolution, for a time independent potential, commits an error of order $\tau^3$ in the single step $t\rightarrow t+\tau$ and so a global error, during the whole simulation, which is $\mathcal{O}(\tau^2)$. While it makes an error of order $\tau^2$ in the single step if the potential depends on time (and this is the case) and so the error is $\mathcal{O}(\tau^3)$ for the whole simulation.
 It is possible to work on the precision of the evolution algorithm for a time-dependent potential, but its not the purpose of this repository.
 
 ## How to use the code
