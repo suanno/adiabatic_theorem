@@ -22,3 +22,4 @@ Download all the .m files in the repository and add the directory hosting them t
 In the "main.m" file there is a section where you can choose the parameters for the _adiabatic evolution_ (so just the velocity of the frequency change in this simple system) and the parameters for the system's state evolution (so the discrete time step $\tau$ and the simulation length).
 
 
+![](https://github.com/Your_Repository_Name/adiabatic_abs_harm.gif)
