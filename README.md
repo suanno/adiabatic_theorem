@@ -17,3 +17,8 @@ The harmonic oscillator potential is $V(x)=\frac12\omega^2x^2$, where $\omega$ i
 It is possible to work on the precision of the evolution algorithm for a time-dependent potential, but its not the purpose of this repository.
 
 ## How to use the code
+Download all the .m files in the repository and add the directory hosting them to the "Matlab's path". Then execute the file "main.m".
+
+In the "main.m" file there is a section where you can choose the parameters for the _adiabatic evolution_ (so just the velocity of the frequency change in this simple system) and the parameters for the system's state evolution (so the discrete time step $\tau$ and the simulation length).
+
+
