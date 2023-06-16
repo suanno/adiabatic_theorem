@@ -1,10 +1,11 @@
 # Adiabatic Theorem visual proof
+## Introduction
 Here is presented an animation that shows the validity of the adiabatic approximation for an harmonic oscillator with a slow varying frequency.
 
 The theorem states that the wave function where the system is "follows" the _instantaneous ground state_ of the system, in this sense:
 
 If you slowly vary the frequency of the oscillator, then the potential (and so the ground state) shape changes in time (so it makes sense talking of the _instantaneous ground state_). During the evolution of the system's state, its _absolute value_ is well approximated by the one of the _instantaneous ground state_, as soon as you change the frequency slowly in time.
-
+## How the code works
 The code plots, as time passes, all those three objects (the potential, the system's state and the  _instantaneous ground state_) in the same canvas.
 
 The evolution of the system's state is achieved _numerically_ with the "Operator splitting method":
@@ -14,3 +15,5 @@ The harmonic oscillator potential is $V(x)=\frac12\omega^2x^2$, where $\omega$ i
 
 **Note that:** the method adopted for the system's state evolution commits an error of order $\tau^3$ in the single step $t\rightarrow t+\tau$ and so a global error, during the whole simulation, which is $\mathcal{O}(\tau^2)$. While it makes an error of order $\tau^2$ in the single step if the potential depends on time (and this is the case) and so the error is $\mathcal{O}(\tau^3)$ for the whole simulation.
 It is possible to work on the precision of the evolution algorithm for a time-dependent potential, but its not the purpose of this repository.
+
+## How to use the code
