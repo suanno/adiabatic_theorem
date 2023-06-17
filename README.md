@@ -16,7 +16,17 @@ The harmonic oscillator potential is $V(x)=\frac12\omega^2x^2$, where $\omega$ i
 **Note that:** the method adopted for the system's state evolution, for a time independent potential, commits an error of order $\tau^3$ in the single step $t\rightarrow t+\tau$ and so a global error, during the whole simulation, which is $\mathcal{O}(\tau^2)$. While it makes an error of order $\tau^2$ in the single step if the potential depends on time (and this is the case) and so the error is $\mathcal{O}(\tau^3)$ for the whole simulation.
 It is possible to work on the precision of the evolution algorithm for a time-dependent potential, but its not the purpose of this repository.
 
-## How to use the code
+## Relative phase
+The adiabatic theorem states that _the modulus square_ of system's state at time t $|\Psi(t)^2|$ is well approximated by _the modulus square_ of the instantaneous ground state $|\Psi_{GS}(t)|$ if the frequency is slowly varying in time. But the approximation is not good for the wavefunction (that is a complex value!).
+
+Here we calculate, at each time step, the **relative phase** between the two wave-functions $\varphi(t)$, defined as:
+$$e^{i\varphi(t)} = \frac{\int_{-\infty}^{+\infty}dx\Phi*(t)\Phi_{GS}(t)}{\int_{-\infty}^{+\infty}dx|\Phi_{GS}(t)|^2}$$
+**Note that:** $\varphi(t)$ can be interpreted as the relative phase only if the modulus square of the two wave-functions are very close, otherwise they do not differ just by a phase!
+
+Additionally two wave-function with the same modulus square could have a relative phase which is a function of $x$!
+The adopted definition for $\varphi(t)$ is independent on $x$, so it is an 'average over x' of the relative phase; it would be nice to show that, at least for times $t$ when the modulus square of the two functions look the same, $\varphi(t)$ does not depend on $x$.
+
+# How to use the code
 Download all the .m files in the repository and add the directory hosting them to the "Matlab's path". Then execute the file "main.m".
 
 In the "main.m" file there is a section where you can choose the parameters for the _adiabatic evolution_ (so just the velocity of the frequency change in this simple system) and the parameters for the system's state evolution (so the discrete time step $\tau$ and the simulation length).
