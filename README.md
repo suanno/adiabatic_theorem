@@ -20,7 +20,7 @@ It is possible to work on the precision of the evolution algorithm for a time-de
 The adiabatic theorem states that _the modulus square_ of system's state at time t $|\Psi(t)^2|$ is well approximated by _the modulus square_ of the instantaneous ground state $|\Psi_{GS}(t)|$ if the frequency is slowly varying in time. But the approximation is not good for the wavefunction (that is a complex value!).
 
 Here we calculate, at each time step, the **relative phase** between the two wave-functions $\varphi(t)$, defined as:
-$$e^{i\varphi(t)} = \frac{\int_{-\infty}^{+\infty}dx\Phi*(t)\Phi_{GS}(t)}{\int_{-\infty}^{+\infty}dx|\Phi_{GS}(t)|^2}$$
+$$e^{i\varphi(t)} = \frac{\int_{-\infty}^{+\infty}dx\Phi^*(t)\Phi_{GS}(t)}{\int_{-\infty}^{+\infty}dx|\Phi_{GS}(t)|^2}$$
 **Note that:** $\varphi(t)$ can be interpreted as the relative phase only if the modulus square of the two wave-functions are very close, otherwise they do not differ just by a phase!
 
 Additionally two wave-function with the same modulus square could have a relative phase which is a function of $x$!
