@@ -33,3 +33,6 @@ In the "main.m" file there is a section where you can choose the parameters for 
 
 
 ![](https://github.com/suanno/adiabatic_theorem/blob/main/adiabatic_abs_harm.gif)
+
+**Note that:** the relative phase plot shows up _only after the end_ of the simulation!
+![](https://github.com/suanno/adiabatic_theorem/blob/main/relative_phase.png)
