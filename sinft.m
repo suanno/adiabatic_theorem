@@ -1,3 +1,5 @@
+% Author: Claudio Destri
+
 function sf = sinft(f)
 % sf = sinft(f) 
 % sine-fourier transform with doubling;
