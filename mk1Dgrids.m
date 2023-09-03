@@ -1,3 +1,5 @@
+% Author: Claudio Destri
+
 function [x,k] = mk1Dgrids(N,BC)
 % [x,k] = mk1Dgrids(N,BC) return the x-space and k-space 1D grids
 % corresponding to a unit lattice spacing and (for k-space) the boundary
